@@ -6,6 +6,8 @@ const colors = require('colors');
 const ErrorHandeler = require('./helper/global.Error');
 const PORT = process.env.PORT || 5000;
 const event = require('./routes/event.route');
+const user = require('./routes/user.route');
+
 // ------------DB Connection----------------
 const dbConnection = require('./server')
 // ------------DB Connection----------------
@@ -21,6 +23,8 @@ app.use(express.json());
 app.use(cors(corsOptions));
 // ------------>>>Create Routes<<<----------------
 app.use('/api/v1/event', event)
+app.use('/api/v1/user', user)
+
 // ------------>>>Create Routes<<<----------------
 app.get('/', (req, res) => {
     res.send('Welcome to the API');

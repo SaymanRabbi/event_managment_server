@@ -2,6 +2,7 @@ const Event = require("../models/event.Model");
 const moment = require('moment');
 module.exports.creteEvenetControler = async(req,res)=>{
     try {
+       
         const {date}= req.body;
         // const parsedDate = moment(date, 'ddd MMM DD YYYY HH:mm:ss [GMT]ZZ (z)');
         //    const formattedDate = parsedDate.format('Do MMMM YYYY');
@@ -25,6 +26,7 @@ module.exports.creteEvenetControler = async(req,res)=>{
 }
 exports.getEvenetControler = async(req,res)=>{
     try {
+       
         const data = await Event.find({});
         res.status(200).json({
             success:true,

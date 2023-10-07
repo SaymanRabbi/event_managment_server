@@ -4,7 +4,7 @@ const router = express.Router();
 /**
  * event route
  */
-router.post('/create',creteEvenetControler )
-router.get('/getEvent',getEvenetControler )
+router.post('/create',creteEvenetControler)
+router.get('/getEvent',getEvenetControler)
 
 module.exports = router;
